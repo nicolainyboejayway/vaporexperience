@@ -18,7 +18,7 @@ export default function App() {
   const [boxPosition, setBoxPosition] = useState([]);
 
   useEffect(() => {
-    setBoxPosition([Math.random(), Math.random(), Math.random()]);
+    setBoxPosition([Math.random() * 4, Math.random(), Math.random() * 3]);
   }, []);
 
   const handleClick = () => {};
@@ -27,7 +27,7 @@ export default function App() {
       style={{ background: "#434343", height: "100vh", width: "100vw" }}
       dpr={[1, 2]}
       shadows
-      camera={{ position: [-10, 15, 5], fov: 50 }}
+      //camera={{ position: [0, 0, 10], fov: 50 }}
     >
       <Suspense fallback={null}>
         <ambientLight intensity={1} />
